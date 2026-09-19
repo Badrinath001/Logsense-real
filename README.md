@@ -11,3 +11,17 @@ Real-time AI-powered log analysis with FastAPI, Pydantic AI & Groq LLM.
 Ingests server logs → AI agent detects anomalies, root cause & severity → Structured JSON via Pydantic AI → Real-time dashboard
 
 ## 🏗️ Architecture
+
+## ⚡ Tech Stack
+- **Backend:** FastAPI, Pydantic, Pydantic AI
+- **AI:** Groq (Llama 3.3 70B) - 10x faster than OpenAI
+- **Infra:** Docker, SQLite, Uvicorn
+- **Features:** Real-time streaming, Root cause analysis, Severity scoring
+
+## 🔧 Run Locally
+```bash
+git clone https://github.com/Badrinath001/Logsense-real.git
+cd Logsense-real
+pip install -r requirements.txt
+echo "GROQ_API_KEY=gsk_xxx" > .env
+uvicorn app:app --reload
